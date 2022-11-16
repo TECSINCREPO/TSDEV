@@ -5,7 +5,7 @@ services:
     restart: unless-stopped
     image: influxdb:1.8
     ports:
-      - '8086:8086'
+      - '8087:8086'
     volumes:
       - /home/oasis/docker/influxdb:/var/lib/influxdb
     environment:
