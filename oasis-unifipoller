@@ -29,7 +29,7 @@ services:
       - GF_INSTALL_PLUGINS=grafana-clock-panel,natel-discrete-panel,grafana-piechart-panel
 
   unifi-poller:
-    container_name: tecsinc-unifipoller
+    container_name: oasis-unifipoller
     restart: unless-stopped
     image: golift/unifi-poller:latest
     depends_on:
