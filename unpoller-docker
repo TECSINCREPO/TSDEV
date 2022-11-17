@@ -20,7 +20,7 @@ services:
     ports:
       - '3000:3000'
     volumes:
-      - /home/tecadmin/docker/grafana:/var/lib/grafana
+      - /home/tecadmin/docker/grafana
     depends_on:
       - influxdb
     environment:
