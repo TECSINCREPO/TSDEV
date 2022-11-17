@@ -1,0 +1,49 @@
+[poller]
+  debug = true
+  quiet = false
+  plugins = []
+
+[influxdb]
+  disable = false
+  url  = "influxdb.tecsinc.com"
+  user = "unifipoller"
+  pass = "unifipoller"
+  db = "unifi"
+  verify_ssl = false
+  interval = "30s"
+  dead_ports = false
+
+[unifi]
+  dynamic = false
+
+[unifi.defaults]
+  url = "https://tecnapfw01.tecsinc.com"
+  user = "unifipoller"
+  pass = "unifipoller"
+  sites = ["all"]
+  save_sites = true
+  hash_pii = false
+  save_ids = true
+  save_events = true
+  save_alarms = true
+  save_anomalies = true
+  save_dpi = true
+  save_rogue = true
+  verify_ssl = false
+  ssl_cert_paths = []
+
+#[[unifi.controller]]
+#  url         = "https://127.0.0.1:8443"
+#  user        = "unifipoller"
+#  pass        = "unifipoller"
+#  sites       = ["all"]
+#  save_sites  = true
+#  hash_pii    = false
+#  save_ids    = false
+#  save_events = false
+#  save_alarms = false
+#  save_anomalies = false
+#  save_dpi    = false
+#  save_rogue  = false
+#  verify_ssl  = false
+#  ssl_cert_paths = []
