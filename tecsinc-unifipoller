@@ -4,8 +4,5 @@ services:
     container_name: tecsinc-unifipoller
     restart: unless-stopped
     image: golift/unifi-poller:latest
-    depends_on:
-      - influxdb
-      - grafana
     volumes:
       - /home/tecadmin/docker/unpoller:/config
