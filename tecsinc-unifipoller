@@ -1,8 +1,0 @@
-version: "3"
-services:
-  unifi-poller:
-    container_name: tecsinc-unifipoller
-    restart: unless-stopped
-    image: golift/unifi-poller:latest
-    volumes:
-      - /home/tecadmin/docker/unpoller:/config
