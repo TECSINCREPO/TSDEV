@@ -19,7 +19,7 @@
 [unifi.defaults]
   url = "https://tecnapfw01.tecsinc.com"
   user = "unifipoller"
-  pass = "unifipoller"
+  pass = "Unifipoller1"
   sites = ["all"]
   save_sites = true
   hash_pii = false
