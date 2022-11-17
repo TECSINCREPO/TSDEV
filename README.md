@@ -1,2 +1,2 @@
 # msdevrepo
-Managed Services Development Repository
+Technical Services Development Repository
