@@ -5,7 +5,7 @@
 
 [influxdb]
   disable = false
-  url  = "influxdb.tecsinc.com"
+  url  = "http://influxdb.tecsinc.com"
   user = "unifipoller"
   pass = "unifipoller"
   db = "unifi"
