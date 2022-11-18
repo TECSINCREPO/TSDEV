@@ -35,4 +35,4 @@ services:
       - influxdb
       - grafana
     volumes:
-      - /home/tecadmin/unifi-poller:/config
+      - /home/tecadmin/docker/unpoller:/config
