@@ -8,15 +8,12 @@ networks:
 services:
   setup:
     image: docker.elastic.co/elasticsearch/elasticsearch:${STACK_VERSION}
-    volumes:
-      - certs:/usr/share/elasticsearch/config/certs
 
   es01:
     image: docker.elastic.co/elasticsearch/elasticsearch:${STACK_VERSION}
     labels:
       co.elastic.logs/module: elasticsearch
     volumes:
-      - certs:/usr/share/elasticsearch/config/certs
       - esdata01:/usr/share/elasticsearch/data
     ports:
       - 9200:9200
@@ -42,7 +39,6 @@ services:
     labels:
       co.elastic.logs/module: kibana
     volumes:
-      - certs:/usr/share/kibana/config/certs
       - kibanadata:/usr/share/kibana/data
     ports:
       - 5601:5601
@@ -51,7 +47,6 @@ services:
       - ELASTICSEARCH_HOSTS=https://es01:9200
       - ELASTICSEARCH_USERNAME=kibana_system
       - ELASTICSEARCH_PASSWORD=${KIBANA_PASSWORD}
-      - ELASTICSEARCH_SSL_CERTIFICATEAUTHORITIES=config/certs/ca/ca.crt
       - XPACK_SECURITY_ENCRYPTIONKEY=${ENCRYPTION_KEY}
       - XPACK_ENCRYPTEDSAVEDOBJECTS_ENCRYPTIONKEY=${ENCRYPTION_KEY}
       - XPACK_REPORTING_ENCRYPTIONKEY=${ENCRYPTION_KEY}
