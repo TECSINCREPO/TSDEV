@@ -1,7 +1,11 @@
-hosts: all
-
-tasks:
-
-- name: Ping all nodes
-
-ansible.builtin.ping:
+---
+- hosts: all
+  become: true
+  gather_facts: false
+  tasks:
+  - name: Ping all hosts
+    ansible.builtin.ping:
+    register: ping_result
+  - name: Show ping results
+    ansible.builtin.debug:
+      msg: "Host {{ inventory_hostname }} is reachable: {{ ping_result.reachable }}"
